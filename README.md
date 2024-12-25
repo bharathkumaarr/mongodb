@@ -159,3 +159,33 @@ $or
 db.students.find({$and: [{gpa: {$gte:7}}, {age: {$lte: 15}}]})
 
 db.students.find({$or: [{gpa: {$gte:7}}, {age: {$lte: 15}}]})
+
+
+
+## indexes
+- allows quick lookup of a field
+- but takes memory, therefore slows down the insert, remove, update operations
+-  use them wisely
+.find({}).explain('executionStats') ---> this shows the time needed to search or find  [linear search]
+
+
+.createIndex({name:1})
+
+1 --> ascending order
+-1 --> descending order
+
+- by using the index we jus examine only that particular index, therefore no huge execution time to search or do operations on it on particular, but takes more memory.
+
+.getIndexes()
+
+.dropIndex("name1")
+
+db.students.createIndex({name:1})
+
+db.students.find({name:"sandy"}).explain('executionStats')
+
+db.students.getIndexes()
+
+db.students.dropIndex('name_1')
+
+- better to use when we use a lot of searching but not a lot of updating
