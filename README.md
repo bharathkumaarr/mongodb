@@ -125,3 +125,20 @@ db.students.deleteOne({name: "newName"})
 db.students.deleteMany({fullTime: true})
 
 db.students.deleteMany({registerDate: {$exists:false}})
+
+
+**Comparison operators**
+
+db.students.find({name:{$ne:"larry"}})
+
+ db.students.find({age:{$gt:20}})
+
+db.students.find({age:{$lt:20}})
+
+db.students.find({age:{$gte:20}})
+
+db.students.find({gpa:{$gte:7,$lte: 10}})
+
+db.students.find({name: {$in: ['sandy', 'patrick', 'name']}})
+
+db.students.find({name: {$nin: ['sandy', 'patrick', 'name']}})
