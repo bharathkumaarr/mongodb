@@ -189,3 +189,18 @@ db.students.getIndexes()
 db.students.dropIndex('name_1')
 
 - better to use when we use a lot of searching but not a lot of updating
+
+## Collections
+(lil in depth)
+
+**return/print  collections**
+
+show collections
+
+**capped collections , max fields & auto indexing**
+
+db.createCollection("teachers", {capped: true, size: 100000, max: 100},{autoIndexId: false})
+
+**drop collection**
+
+db.courses.drop()
