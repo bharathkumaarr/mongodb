@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "676be6546ae0ecce5577f825"
+  },
+  "name": "Spongebob, age: 30, gpa: 8.9",
+  "fullTime": false
+},
+{
+  "_id": {
+    "$oid": "676be7046ae0ecce5577f826"
+  },
+  "name": "bharat",
+  "age": 21,
+  "gpa": 8,
+  "fullTime": false
+},
+{
+  "_id": {
+    "$oid": "676be7046ae0ecce5577f827"
+  },
+  "name": "sandy",
+  "age": 27,
+  "gpa": 8.5,
+  "fullTime": true
+},
+{
+  "_id": {
+    "$oid": "676be7046ae0ecce5577f828"
+  },
+  "name": "gary",
+  "age": 24,
+  "gpa": 9,
+  "fullTime": true
+},
+{
+  "_id": {
+    "$oid": "676be79dda86ccc485490a6f"
+  },
+  "name": "newName",
+  "age": 30,
+  "gpa": 10,
+  "fullTime": false
+},
+{
+  "_id": {
+    "$oid": "676be817da86ccc485490a71"
+  },
+  "name": "name1",
+  "age": 10,
+  "gpa": 6,
+  "fullTime": false
+},
+{
+  "_id": {
+    "$oid": "676be817da86ccc485490a72"
+  },
+  "name": "name2",
+  "age": 11,
+  "gpa": 7,
+  "fullTime": false
+},
+{
+  "_id": {
+    "$oid": "676be817da86ccc485490a73"
+  },
+  "name": "name3",
+  "age": 12,
+  "gpa": 8,
+  "fullTime": false
+},
+{
+  "_id": {
+    "$oid": "676be8a26ae0ecce5577f829"
+  },
+  "name": "larry",
+  "fullTime": false
+},
+{
+  "_id": {
+    "$oid": "676be95a6ae0ecce5577f82a"
+  },
+  "name": "larry",
+  "age": 32,
+  "gpa": 8.2,
+  "fullTime": false,
+  "registerDate": {
+    "$date": "2024-12-25T11:15:38.452Z"
+  },
+  "graduationDate": null,
+  "courses": [
+    "biology",
+    "chemistry",
+    "calculus"
+  ],
+  "address": {
+    "street": "fakestreet213",
+    "city": "sanjose",
+    "zip": 123345
+  }
+}]
