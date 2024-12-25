@@ -26,10 +26,15 @@ INSTALLATION OF THE MONGODB, COMPASS GUI, AND SHELL-MONGOSH
 
 **databases - mongosh**
 show dbs  ---> (*to show all the databases*)
+
 use admin ---> (*to switch to a database named admin*)
+
 use school ---> (*to create a new database named school and switch to it*)
+
 db.createCollection("students") ---> (*to create a collection inside the database. collection named students*)
+
 db.dropDatabase() ---> (to drop the database)
+
 
 **databases - Compass GUI**
 just create database and collection using the create button in compass gui.
