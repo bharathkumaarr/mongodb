@@ -47,3 +47,54 @@ db.dropDatabase() ---> (to drop the database)
 **databases - Compass GUI**
 
 just create database and collection using the create button in compass gui.
+
+**in mongosh**
+
+
+db.students.insertOne({name: "Spongebob, age: 30, gpa: 8.9"})
+
+ db.students.find()
+
+
+db.students.insertMany([{name: 'bharat', age: 21, gpa: 8},{name: 'sandy', age: 27, gpa: 8.5},{name: "gary", age: 24, gpa: 9}])
+
+
+**datatypes in dbs**
+
+strings, integers-whole numbers(no decimal), doubles-(decimals), bool, new Date(), null, arrays ['    ', '   ', "   "], nested objects.
+
+
+**sort** by names in alphabetical order:
+
+db.students.find().sort({name: 1})
+
+
+sort by reverse alphabetical:
+db.students.find().sort({name:-1})
+
+sort by gpa (*small to big*): (1)
+
+ db.students.find().sort({gpa: 1})
+
+
+sort by gpa (*big to small*): (-1)
+
+db.students.find().sort({gpa: -1})
+
+
+**limiting the amount of documents** *returned/printed*
+
+
+db.students.find().limit(1)
+
+
+**find()**
+
+db.students.find({name: "sandy"})
+
+db.students.find({gpa: 10})
+
+db.students.find({gpa: 6, fullTime: true})
+
+
+db.students.find({},{name: true}). ---> *(gives all names in the docs. here first parameter is called as query parameter, and second parameter is projection parameter)*
