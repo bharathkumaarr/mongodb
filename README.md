@@ -121,3 +121,7 @@ db.students.updateMany({fullTime: {$exists:false}},{$set:{fullTime:true}})
 **delete docs**
 
 db.students.deleteOne({name: "newName"})
+
+db.students.deleteMany({fullTime: true})
+
+db.students.deleteMany({registerDate: {$exists:false}})
