@@ -98,3 +98,26 @@ db.students.find({gpa: 6, fullTime: true})
 
 
 db.students.find({},{name: true}). ---> *(gives all names in the docs. here first parameter is called as query parameter, and second parameter is projection parameter)*
+
+**update documents in mongoDB**
+
+
+db.students.updateOne({name: 'sandy'},{$set: {fullTime: true}})
+
+
+db.students.updateOne({_id: ObjectId('676be7046ae0ecce5577f827')}, {$set: {fullTime: false}})
+
+to **remove a field**
+
+
+db.students.updateOne({_id: ObjectId('676be7046ae0ecce5577f827')}, {$unset: {fullTime: false}})
+
+**update many fields**
+
+db.students.updateMany({}, {$set: {fullTime: false}})
+
+db.students.updateMany({fullTime: {$exists:false}},{$set:{fullTime:true}})
+
+**delete docs**
+
+db.students.deleteOne({name: "newName"})
