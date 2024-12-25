@@ -1,4 +1,4 @@
-## MONGODB
+# MONGODB
 
 similar to **NOSQL** - not only structured query language
 
@@ -64,7 +64,9 @@ db.students.insertMany([{name: 'bharat', age: 21, gpa: 8},{name: 'sandy', age: 2
 strings, integers-whole numbers(no decimal), doubles-(decimals), bool, new Date(), null, arrays ['    ', '   ', "   "], nested objects.
 
 
-**sort** by names in alphabetical order:
+## **sort**
+
+by names in alphabetical order:
 
 db.students.find().sort({name: 1})
 
@@ -82,13 +84,13 @@ sort by gpa (*big to small*): (-1)
 db.students.find().sort({gpa: -1})
 
 
-**limiting the amount of documents** *returned/printed*
+## **limiting the amount of documents** *returned/printed*
 
 
 db.students.find().limit(1)
 
 
-**find()**
+## **find()**
 
 db.students.find({name: "sandy"})
 
@@ -99,7 +101,7 @@ db.students.find({gpa: 6, fullTime: true})
 
 db.students.find({},{name: true}). ---> *(gives all names in the docs. here first parameter is called as query parameter, and second parameter is projection parameter)*
 
-**update documents in mongoDB**
+## **update documents in mongoDB**
 
 
 db.students.updateOne({name: 'sandy'},{$set: {fullTime: true}})
@@ -112,13 +114,13 @@ to **remove a field**
 
 db.students.updateOne({_id: ObjectId('676be7046ae0ecce5577f827')}, {$unset: {fullTime: false}})
 
-**update many fields**
+## **update many fields**
 
 db.students.updateMany({}, {$set: {fullTime: false}})
 
 db.students.updateMany({fullTime: {$exists:false}},{$set:{fullTime:true}})
 
-**delete docs**
+## **delete docs**
 
 db.students.deleteOne({name: "newName"})
 
@@ -127,7 +129,7 @@ db.students.deleteMany({fullTime: true})
 db.students.deleteMany({registerDate: {$exists:false}})
 
 
-**Comparison operators**
+## **Comparison operators**
 
 db.students.find({name:{$ne:"larry"}})
 
@@ -142,3 +144,18 @@ db.students.find({gpa:{$gte:7,$lte: 10}})
 db.students.find({name: {$in: ['sandy', 'patrick', 'name']}})
 
 db.students.find({name: {$nin: ['sandy', 'patrick', 'name']}})
+
+## **logical operators**
+
+$and
+
+$not
+
+$nor
+
+$or
+
+
+db.students.find({$and: [{gpa: {$gte:7}}, {age: {$lte: 15}}]})
+
+db.students.find({$or: [{gpa: {$gte:7}}, {age: {$lte: 15}}]})
